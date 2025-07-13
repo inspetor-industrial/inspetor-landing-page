@@ -1,69 +1,98 @@
-# React + TypeScript + Vite
+# Inspetor Industrial - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório da landing page para o **Inspetor Industrial**, um projeto desenvolvido para apresentar a empresa, seus serviços e facilitar o contato de novos clientes através de um formulário moderno e funcional.
 
-Currently, two official plugins are available:
+O design foi construído com foco em **mobile-first**, garantindo uma experiência de usuário fluida e acessível em qualquer dispositivo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Preview da Página de Contato](https://i.imgur.com/Gj3x8oE.png)
 
-## Expanding the ESLint configuration
+## ✨ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Este projeto foi construído com as seguintes tecnologias:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React 19**: Biblioteca para construção de interfaces de usuário.
+- **Vite**: Ferramenta de build extremamente rápida para desenvolvimento web moderno.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **TailwindCSS v4**: Framework CSS utility-first para estilização rápida e customizável.
+- **Shadcn UI**: Coleção de componentes de UI reusáveis e acessíveis, construídos sobre Radix UI e Tailwind CSS.
+- **React Hook Form** & **Zod**: Para gerenciamento e validação de formulários de forma robusta e segura.
+- **Lucide React**: Biblioteca de ícones open-source.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📂 Estrutura do Projeto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+A estrutura de arquivos foi organizada para manter o código modular e de fácil manutenção:
+
+```
+/src
+├── /components         # Componentes reutilizáveis da aplicação
+│   ├── /ui             # Componentes base da Shadcn UI (Button, Card, Input, etc.)
+│   └── about.tsx
+│   └── benefits.tsx
+│   └── contact-section.tsx
+│   └── ...
+├── /pages              # Componentes de página completos
+│   └── landing.tsx
+├── /lib                # Funções utilitárias e configurações
+│   └── utils.ts
+├── app.tsx             # Componente raiz da aplicação
+├── main.tsx            # Ponto de entrada da aplicação
+├── global.css          # Estilos globais e configuração do Tailwind
+└── router.tsx          # Configuração de rotas
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Como Começar
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Siga os passos abaixo para rodar o projeto em seu ambiente de desenvolvimento.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/en/) (versão 20 ou superior)
+- [pnpm](https://pnpm.io/installation) (gerenciador de pacotes)
+
+### Instalação
+
+1.  Clone o repositório:
+    ```bash
+    git clone https://github.com/seu-usuario/inspetor-industrial.git
+    ```
+2.  Navegue até o diretório do projeto:
+    ```bash
+    cd inspetor-industrial
+    ```
+3.  Instale as dependências:
+    ```bash
+    pnpm install
+    ```
+
+### Rodando o Projeto
+
+Para iniciar o servidor de desenvolvimento, execute:
+
+```bash
+pnpm dev
 ```
+
+Abra [http://localhost:5173](http://localhost:5173) (ou a porta indicada no seu terminal) no seu navegador para ver a aplicação.
+
+## 🛠️ Scripts Disponíveis
+
+- `pnpm dev`: Inicia o servidor de desenvolvimento com hot-reload.
+- `pnpm build`: Compila e otimiza a aplicação para produção. Os arquivos finais estarão na pasta `/dist`.
+- `pnpm lint`: Executa o linter (ESLint) para verificar a qualidade do código.
+- `pnpm preview`: Inicia um servidor local para visualizar a versão de produção.
+
+## 🎨 Customização
+
+### Tailwind CSS
+
+As configurações do Tailwind estão no arquivo `tailwind.config.js`. Você pode customizar o tema, adicionar novas cores, fontes e outras propriedades conforme a necessidade.
+
+### Shadcn UI
+
+Para adicionar novos componentes da Shadcn UI, utilize o comando:
+
+```bash
+pnpm dlx shadcn-ui@latest add [nome-do-componente]
+```
+
+Isso irá adicionar o código-fonte do componente diretamente na pasta `src/components/ui`, permitindo total controle sobre sua estilização e comportamento.
