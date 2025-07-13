@@ -1,5 +1,6 @@
 import { About } from '@/components/about'
 import { Benefits } from '@/components/benefits'
+import { ContactSection } from '@/components/contact-section'
 import { CtaSection } from '@/components/cta-section'
 import { PublicFooter } from '@/components/footer'
 import { Header } from '@/components/header'
@@ -13,21 +14,14 @@ export function LandingPage() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <section id="benefits">
-          <Benefits />
-        </section>
-        <section id="how-it-works">
-          <HowItWorks />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="cta">
-          <CtaSection />
-        </section>
+        <Benefits />
+        <HowItWorks />
+        <About />
+        <CtaSection />
+        <ContactSection />
       </main>
-      <PublicFooter />
       <WppContact />
+      <PublicFooter />
     </div>
   )
 }
