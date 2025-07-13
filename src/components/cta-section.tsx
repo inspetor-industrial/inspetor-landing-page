@@ -4,7 +4,7 @@ export function CtaSection() {
   return (
     <section
       id="cta"
-      className="w-full flex items-center justify-center py-12 md:py-24 lg:py-32"
+      className="w-full scroll-mt-16 flex items-center justify-center py-12 md:py-24 lg:py-32"
     >
       <div className="container flex flex-col items-center justify-center gap-4 px-4 text-center md:px-6">
         <div className="space-y-3">

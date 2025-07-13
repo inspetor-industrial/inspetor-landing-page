@@ -79,7 +79,10 @@ export function ContactSection() {
   }
 
   return (
-    <div className="w-full bg-background py-12 md:py-24 lg:py-32 flex items-center justify-center">
+    <div
+      id="contact"
+      className="w-full scroll-mt-16 bg-background py-12 md:py-24 lg:py-32 flex items-center justify-center"
+    >
       <div className="container grid items-center gap-12 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
         <div className="space-y-6">
           <div className="space-y-3">

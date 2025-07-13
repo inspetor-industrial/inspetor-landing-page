@@ -50,7 +50,7 @@ export function Benefits() {
   return (
     <section
       id="benefits"
-      className="w-full py-12 md:py-24 lg:py-32 bg-muted flex items-center justify-center"
+      className="w-full scroll-mt-16 py-12 md:py-24 lg:py-32 bg-muted flex items-center justify-center"
     >
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">

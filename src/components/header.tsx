@@ -19,14 +19,22 @@ import {
 } from './ui/dropdown-menu'
 
 const navLinks = [
-  { href: '/#benefits', label: 'Benefícios', icon: Briefcase },
-  { href: '/#how-it-works', label: 'Como Funciona', icon: NotebookPen },
-  { href: '/#contact', label: 'Contato', icon: Mail },
-  { href: '/#pricing', label: 'Planos', icon: CreditCard },
-  { href: '/#about', label: 'Sobre Nós', icon: Users },
+  { href: '#benefits', label: 'Benefícios', icon: Briefcase },
+  { href: '#how-it-works', label: 'Como Funciona', icon: NotebookPen },
+  { href: '#contact', label: 'Contato', icon: Mail },
+  { href: '#pricing', label: 'Planos', icon: CreditCard },
+  { href: '#about', label: 'Sobre Nós', icon: Users },
 ]
 
 export function Header() {
+  function handleRedirect(elementId: string) {
+    const element = document.querySelector(elementId)
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <header className="sticky px-4 flex items-center justify-center top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
@@ -41,13 +49,14 @@ export function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
-            <a
+            <Button
               key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              variant="link"
+              onClick={() => handleRedirect(link.href)}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary !w-fit !p-0"
             >
               {link.label}
-            </a>
+            </Button>
           ))}
         </nav>
 
@@ -77,7 +86,10 @@ export function Header() {
                 <DropdownMenuSeparator />
 
                 {navLinks.map((link) => (
-                  <DropdownMenuItem key={link.href}>
+                  <DropdownMenuItem
+                    key={link.href}
+                    onClick={() => handleRedirect(link.href)}
+                  >
                     <link.icon className="size-5" />
                     {link.label}
                   </DropdownMenuItem>
