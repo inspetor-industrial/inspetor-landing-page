@@ -4,7 +4,7 @@ Este é o repositório da landing page para o **Inspetor Industrial**, um projet
 
 O design foi construído com foco em **mobile-first**, garantindo uma experiência de usuário fluida e acessível em qualquer dispositivo.
 
-![Preview da Página de Contato](https://i.imgur.com/Gj3x8oE.png)
+![Preview da Página de Contato](/public/application-background.png)
 
 ## ✨ Tecnologias Utilizadas
 
