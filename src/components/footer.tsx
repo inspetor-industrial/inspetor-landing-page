@@ -9,14 +9,21 @@ export function PublicFooter() {
       </p>
       <nav className="sm:ml-auto flex gap-4 sm:gap-6">
         <a
-          href="#about"
+          href="/#about"
           className="text-xs hover:underline underline-offset-4"
           rel="noreferrer"
         >
           Sobre
         </a>
         <a
-          href="#"
+          href="/#pricing"
+          className="text-xs hover:underline underline-offset-4"
+          rel="noreferrer"
+        >
+          Planos
+        </a>
+        <a
+          href="/#contact"
           className="text-xs hover:underline underline-offset-4"
           rel="noreferrer"
         >

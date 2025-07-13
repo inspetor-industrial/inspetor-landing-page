@@ -1,4 +1,3 @@
-import { About } from '@/components/about'
 import { Benefits } from '@/components/benefits'
 import { ContactSection } from '@/components/contact-section'
 import { CtaSection } from '@/components/cta-section'
@@ -7,6 +6,8 @@ import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
 import { HowItWorks } from '@/components/how-it-works'
 import { WppContact } from '@/components/wpp-contact'
+import { Pricing } from '@/components/pricing'
+import { About } from '@/components/about'
 
 export function LandingPage() {
   return (
@@ -16,8 +17,9 @@ export function LandingPage() {
         <Hero />
         <Benefits />
         <HowItWorks />
-        <About />
+        <Pricing />
         <CtaSection />
+        <About />
         <ContactSection />
       </main>
       <WppContact />

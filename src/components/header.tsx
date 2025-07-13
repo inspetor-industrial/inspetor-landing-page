@@ -1,6 +1,7 @@
 import {
   ArrowRight,
   Briefcase,
+  CreditCard,
   Factory,
   Mail,
   Menu,
@@ -20,8 +21,9 @@ import {
 const navLinks = [
   { href: '/#benefits', label: 'Benefícios', icon: Briefcase },
   { href: '/#how-it-works', label: 'Como Funciona', icon: NotebookPen },
+  { href: '/#contact', label: 'Contato', icon: Mail },
+  { href: '/#pricing', label: 'Planos', icon: CreditCard },
   { href: '/#about', label: 'Sobre Nós', icon: Users },
-  { href: '/#cta', label: 'Contato', icon: Mail },
 ]
 
 export function Header() {
@@ -31,7 +33,7 @@ export function Header() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
           <Factory className="h-7 w-7 text-primary" />
-          <span className="hidden font-bold sm:inline-block">
+          <span className="hidden font-bold lg:inline-block">
             Inspetor Industrial
           </span>
         </a>
